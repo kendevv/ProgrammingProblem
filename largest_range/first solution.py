@@ -27,4 +27,8 @@ def largestRange(array):
                 numbers[right_count] = 1
                 left_count += 1
             right_count -= 1
-            
+
+            if (right-left) <=(right_count-left_count):
+                right = right_count
+                left = left_count
+    return[left, right]
