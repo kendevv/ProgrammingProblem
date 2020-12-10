@@ -5,3 +5,26 @@
 #Note that numbers do not need to be ordered or adjacent in the array in order to form a range. Assume that there will only be one largest range.
 #Sample input: [1, 11,3,0,15,5,2,4,10,7,12,6] 
 #Sample output: (0,7)
+
+
+def largestRange(array):
+
+    numbers ={x:0 for x in array}
+    left = right = 0
+    for number in array :
+        if numbers[number] == 0 :
+            left_count = number - 1
+            right_count = number + 1
+
+
+            while left_count in numbers:
+                numbers[left_count] = 1
+                left_count -= 1
+            left_count += 1
+
+            
+            while right_count in numbers:
+                numbers[right_count] = 1
+                left_count += 1
+            right_count -= 1
+            
