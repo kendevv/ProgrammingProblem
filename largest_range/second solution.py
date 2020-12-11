@@ -12,4 +12,10 @@ def largestRange(array):
     nums = {}
     for num in array:
         nums[num] = True
-    
+    for num in array:
+        if not nums[num]:
+            continue
+        nums[num] = False
+        currentLength = 1
+        left = num - 1
+        right = num + 1
