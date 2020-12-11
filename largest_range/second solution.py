@@ -27,3 +27,7 @@ def largestRange(array):
             nums[right] = False
             currentLength += 1
             right += 1 
+        if currentLength > longestLength:
+            longestLength = currentLength
+            bestRange = [left + 1, right - 1]
+    return bestRange
