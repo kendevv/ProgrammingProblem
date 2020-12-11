@@ -23,3 +23,7 @@ def largestRange(array):
             nums[left] = False
             currentLength += 1
             left -= 1 
+        while right in nums:
+            nums[right] = False
+            currentLength += 1
+            right += 1 
