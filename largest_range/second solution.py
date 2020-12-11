@@ -6,3 +6,10 @@
 #Sample input: [1, 11,3,0,15,5,2,4,10,7,12,6] 
 #Sample output: (0,7)
 
+def largestRange(array):
+    bestRange = []
+    longestLength = 0
+    nums = {}
+    for num in array:
+        nums[num] = True
+    
