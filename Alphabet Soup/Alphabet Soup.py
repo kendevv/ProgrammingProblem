@@ -4,3 +4,10 @@
 #  Sample Input/Output:
 #  A.) Input: "hello" Output: "ehllo"
 #  B.) Input: "eLEPhAnt Output: "AEehLnPt" 
+
+
+def alphabetSepop (string):
+    li =sorted(list(string))
+    lowerLi = sorted(list(string.lower))
+    caps = []
+    newString = '' 
